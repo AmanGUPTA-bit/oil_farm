@@ -1,0 +1,485 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shurbhi — Kacchi Ghani Oils &amp; Chakki Atta, Pressed with a Mother's Care</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header id="siteHeader">
+  <div class="wrap">
+    <nav>
+      <a href="#home" class="logo">
+        <svg class="logo-mark" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="23" stroke="#C08A17" stroke-width="2"/>
+          <path d="M24 12c5 6 9 11 9 16.5A9 9 0 0 1 15 28.5C15 23 19 18 24 12Z" fill="#C08A17"/>
+        </svg>
+        <span>
+          <span class="logo-text">Shurbhi</span>
+          <span class="logo-tag">Pure Oils &amp; Chakki Atta</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#process">Kacchi Ghani</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#care">Mother's Care</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-outline">Enquire Now</a>
+        <button class="burger" id="burgerBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="menu-close" id="menuClose" aria-label="Close menu">&times;</button>
+  <a href="#home">Home</a>
+  <a href="#story">Our Story</a>
+  <a href="#process">Kacchi Ghani</a>
+  <a href="#products">Products</a>
+  <a href="#care">Mother's Care</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ================= HERO (static text left, sliding image carousel right) ================= -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+
+    <!-- Fixed left column -->
+    <div class="hero-text">
+      <span class="slide-hindi">शुद्धता जिस पर भरोसा हो</span>
+      <h1>Purity, pressed <em>slowly</em>.<br>Care, poured like <em>a mother's.</em></h1>
+      <p>Shurbhi's kacchi ghani oils and stone-ground atta are made the unhurried, traditional way — no heat, no chemicals, no shortcuts. Just the honest nourishment every family deserves.</p>
+      <div class="slide-cta">
+        <a href="#products" class="btn btn-solid">Explore Products</a>
+        <a href="#process" class="btn btn-outline">Why Kacchi Ghani?</a>
+      </div>
+
+      <div class="dots" id="dots">
+        <button class="dot active" data-dot="0"><span class="fill"></span></button>
+        <button class="dot" data-dot="1"><span class="fill"></span></button>
+        <button class="dot" data-dot="2"><span class="fill"></span></button>
+      </div>
+    </div>
+
+    <!-- Sliding right column: 3 images -->
+    <div class="hero-visual">
+      <div class="image-slider-viewport">
+        <div class="image-slider-track" id="heroTrack">
+
+          <!-- Image 1: brand illustration -->
+          <div class="image-slide">
+            <div class="ghani-scene" aria-hidden="true">
+              <svg viewBox="0 0 440 440">
+                <ellipse cx="220" cy="400" rx="150" ry="14" fill="#4A2E1D" opacity="0.12"/>
+                <rect x="110" y="230" width="220" height="40" rx="8" fill="#7C2A34" opacity="0.9"/>
+                <rect x="130" y="200" width="180" height="34" rx="8" fill="#4A2E1D"/>
+                <g class="wheel-group">
+                  <circle cx="220" cy="165" r="72" fill="#E8B94D" opacity="0.25"/>
+                  <circle cx="220" cy="165" r="72" fill="none" stroke="#C08A17" stroke-width="6"/>
+                  <circle cx="220" cy="165" r="52" fill="none" stroke="#C08A17" stroke-width="3" opacity="0.6"/>
+                  <circle cx="220" cy="97" r="6" fill="#7C2A34"/>
+                  <circle cx="220" cy="233" r="6" fill="#7C2A34"/>
+                  <circle cx="152" cy="165" r="6" fill="#7C2A34"/>
+                  <circle cx="288" cy="165" r="6" fill="#7C2A34"/>
+                </g>
+                <g class="arm-group">
+                  <rect x="216" y="55" width="8" height="110" rx="4" fill="#4A2E1D"/>
+                  <circle cx="220" cy="55" r="9" fill="#4A2E1D"/>
+                </g>
+                <circle cx="220" cy="165" r="14" fill="#4A2E1D"/>
+                <path d="M292 205 q26 4 30 30" stroke="#4A2E1D" stroke-width="8" fill="none" stroke-linecap="round"/>
+                <ellipse class="drop" cx="322" cy="238" rx="5" ry="7" fill="#C08A17"/>
+                <ellipse class="drop d2" cx="322" cy="238" rx="5" ry="7" fill="#C08A17"/>
+                <path d="M298 288 h50 v70 a25 25 0 0 1 -25 25 a25 25 0 0 1 -25 -25 z" fill="#FFFBF2" opacity="0.5" stroke="#C08A17" stroke-width="2.5"/>
+                <clipPath id="jarClip">
+                  <path d="M298 288 h50 v70 a25 25 0 0 1 -25 25 a25 25 0 0 1 -25 -25 z"/>
+                </clipPath>
+                <g clip-path="url(#jarClip)">
+                  <rect class="jar-fill" x="296" y="300" width="54" height="90" fill="#C08A17" style="transform-origin:323px 390px;"/>
+                </g>
+                <rect x="308" y="278" width="30" height="12" rx="3" fill="#4A2E1D"/>
+                <ellipse class="ripple" cx="323" cy="330" rx="18" ry="6" fill="none" stroke="#FFFBF2" stroke-width="2"/>
+                <ellipse class="ripple r2" cx="323" cy="330" rx="18" ry="6" fill="none" stroke="#FFFBF2" stroke-width="2"/>
+                <g transform="translate(60,300)" opacity="0.85">
+                  <path d="M0 90 C 10 60, 5 30, 20 0" stroke="#3E6650" stroke-width="4" fill="none" stroke-linecap="round"/>
+                  <ellipse cx="20" cy="6" rx="6" ry="10" fill="#E8B94D" transform="rotate(20 20 6)"/>
+                  <ellipse cx="10" cy="18" rx="6" ry="10" fill="#E8B94D" transform="rotate(-10 10 18)"/>
+                  <ellipse cx="28" cy="22" rx="6" ry="10" fill="#E8B94D" transform="rotate(35 28 22)"/>
+                  <ellipse cx="12" cy="34" rx="6" ry="10" fill="#E8B94D" transform="rotate(-25 12 34)"/>
+                  <ellipse cx="26" cy="38" rx="6" ry="10" fill="#E8B94D" transform="rotate(18 26 38)"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image 2: Kacchi Ghani Mustard Oil photo -->
+          <div class="image-slide">
+            <div class="hero-photo-frame">
+              <img src="{%static 'images/surbhi-oil.png' %}"alt="Woman holding a bottle of Surbhi Kacchi Ghani Mustard Oil in her kitchen">
+              <span class="hero-photo-badge">Kacchi Ghani Mustard Oil</span>
+            </div>
+          </div>
+
+          <!-- Image 3: Premium Atta photo -->
+          <div class="image-slide">
+            <div class="hero-photo-frame">
+              <img src="{%static 'images/surbhi-atta.png' %}" alt="Woman holding a bag of Surbhi Premium MP Atta in her kitchen">
+              <span class="hero-photo-badge">Premium MP Atta</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= TRUST STRIP ================= -->
+<div class="trust-strip">
+  <div class="wrap">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#E8B94D" stroke-width="2"><path d="M12 2l2.5 6.5H21l-5.5 4 2 6.5L12 15l-5.5 4 2-6.5L3 8.5h6.5z"/></svg>
+      Wood-Pressed, Kacchi Ghani Method
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#E8B94D" stroke-width="2"><path d="M3 12l6 6L21 6"/></svg>
+      Zero Chemicals, Zero Preservatives
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#E8B94D" stroke-width="2"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 5a5.5 5.5 0 019.5 7c-2.5 4.5-9.5 9-9.5 9z"/></svg>
+      Made for Family Health
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#E8B94D" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+      Fresh Batches, Delivered Weekly
+    </div>
+  </div>
+</div>
+
+<!-- ================= STORY ================= -->
+<section class="story" id="story">
+  <div class="wrap story-grid">
+    <div class="story-art">
+      <svg viewBox="0 0 380 380">
+        <circle cx="190" cy="190" r="180" fill="#E8B94D" opacity="0.18"/>
+        <!-- mother and child silhouette, simple warm shapes -->
+        <path d="M150 300 q0 -70 40 -70 q40 0 40 70 z" fill="#7C2A34"/>
+        <circle cx="190" cy="205" r="26" fill="#4A2E1D"/>
+        <path d="M170 280 q10 -30 30 -30 q22 0 28 24" fill="#3E6650"/>
+        <circle cx="205" cy="255" r="14" fill="#4A2E1D"/>
+        <path d="M130 320 q60 -26 120 0 l0 20 l-120 0 z" fill="#24402C"/>
+      </svg>
+    </div>
+    <div class="story-text">
+      <span class="eyebrow">Our Story</span>
+      <h2 style="margin:14px 0 20px;">A promise that started in one home kitchen.</h2>
+      <p>Shurbhi began the way most good things do at home — a mother, tired of packaged oils that smelled of nothing and did little for her family's health, went back to the old wooden ghani her own mother once trusted.</p>
+      <p>What came out was slower to make, but richer in aroma, colour, and nourishment. Today, Shurbhi presses every drop of oil and mills every sack of atta the same unhurried way, so that the care a mother pours into her family's plate never has to be diluted.</p>
+      <p class="signature-line">— Because health should never be rushed, and family never compromised.</p>
+    </div>
+  </div>
+  <div class="drop-divider"><span class="line"></span>
+    <svg viewBox="0 0 16 20" fill="#C08A17"><path d="M8 0c4 5 7 9 7 12.5A7 7 0 0 1 1 12.5C1 9 4 5 8 0Z"/></svg>
+    <span class="line"></span>
+  </div>
+</section>
+
+<!-- ================= PROCESS / WHY KACCHI GHANI ================= -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The Kacchi Ghani Difference</span>
+      <h2>Why slow pressing means better health</h2>
+      <p>"Kacchi ghani" means the oil is extracted by a wooden crusher at low speed and low temperature — nothing is heated, refined, or chemically treated away.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-card">
+        <span class="process-num">01</span>
+        <svg class="process-icon" viewBox="0 0 48 48" fill="none" stroke="#3E6650" stroke-width="2.2"><path d="M24 6l4 10h11l-9 7 3 11-9-7-9 7 3-11-9-7h11z"/></svg>
+        <h4>Handpicked Seeds</h4>
+        <p>Only whole, sun-dried mustard, groundnut and sesame seeds sourced from trusted farms enter the ghani.</p>
+      </div>
+      <div class="process-card">
+        <span class="process-num">02</span>
+        <svg class="process-icon" viewBox="0 0 48 48" fill="none" stroke="#3E6650" stroke-width="2.2"><circle cx="24" cy="24" r="16"/><path d="M24 12v12l8 6"/></svg>
+        <h4>Slow Wooden Pressing</h4>
+        <p>The wooden ghani turns gently for hours, crushing seeds at low speed so nothing is lost to heat or friction.</p>
+      </div>
+      <div class="process-card">
+        <span class="process-num">03</span>
+        <svg class="process-icon" viewBox="0 0 48 48" fill="none" stroke="#3E6650" stroke-width="2.2"><path d="M24 6c8 10 14 17 14 25a14 14 0 0 1-28 0c0-8 6-15 14-25z"/></svg>
+        <h4>No Heat, No Chemicals</h4>
+        <p>No solvents, no high-heat extraction — the natural aroma, colour and nutrients of the seed stay intact.</p>
+      </div>
+      <div class="process-card">
+        <span class="process-num">04</span>
+        <svg class="process-icon" viewBox="0 0 48 48" fill="none" stroke="#3E6650" stroke-width="2.2"><path d="M24 4v6M24 38v6M4 24h6M38 24h6M9 9l4 4M35 35l4 4M9 39l4-4M35 13l4-4"/><circle cx="24" cy="24" r="9"/></svg>
+        <h4>Nutrient-Rich Oil</h4>
+        <p>The result is oil rich in natural antioxidants and vitamins — food that works quietly for your family's health.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our Products</span>
+      <h2>Everything a healthy kitchen needs</h2>
+      <p>Six essentials, pressed and milled the traditional way — so every meal you make for your family starts from something pure.</p>
+    </div>
+
+    <div class="product-grid">
+
+      <!-- 1 -->
+      <div class="product-card">
+        <div class="product-visual">
+          <span class="product-tag">Bestseller</span>
+          <svg viewBox="0 0 100 140"><path d="M38 10h24v18l10 14v78a8 8 0 0 1-8 8H36a8 8 0 0 1-8-8V42l10-14z" fill="#FFFBF2" stroke="#C08A17" stroke-width="2.5"/><rect x="36" y="60" width="28" height="60" fill="#C08A17"/><rect x="34" y="8" width="32" height="8" rx="2" fill="#4A2E1D"/></svg>
+        </div>
+        <div class="product-body">
+          <h4>Kacchi Ghani Mustard Oil</h4>
+          <p>Pungent, golden and cold-pressed — the everyday oil for tadka, pickles and deep-rooted flavour.</p>
+          <div class="product-meta">
+            <span class="product-size">500ml / 1L / 5L</span>
+            <a href="#contact" class="product-link">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="product-card">
+        <div class="product-visual">
+          <svg viewBox="0 0 100 140"><path d="M38 10h24v18l10 14v78a8 8 0 0 1-8 8H36a8 8 0 0 1-8-8V42l10-14z" fill="#FFFBF2" stroke="#3E6650" stroke-width="2.5"/><rect x="36" y="65" width="28" height="55" fill="#3E6650"/><rect x="34" y="8" width="32" height="8" rx="2" fill="#4A2E1D"/></svg>
+        </div>
+        <div class="product-body">
+          <h4>Kacchi Ghani Groundnut Oil</h4>
+          <p>Mild, nutty and heart-friendly — ideal for everyday curries and traditional cooking.</p>
+          <div class="product-meta">
+            <span class="product-size">500ml / 1L / 5L</span>
+            <a href="#contact" class="product-link">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="product-card">
+        <div class="product-visual">
+          <span class="product-tag">New</span>
+          <svg viewBox="0 0 100 140"><path d="M38 10h24v18l10 14v78a8 8 0 0 1-8 8H36a8 8 0 0 1-8-8V42l10-14z" fill="#FFFBF2" stroke="#7C2A34" stroke-width="2.5"/><rect x="36" y="55" width="28" height="65" fill="#7C2A34"/><rect x="34" y="8" width="32" height="8" rx="2" fill="#4A2E1D"/></svg>
+        </div>
+        <div class="product-body">
+          <h4>Cold-Pressed Sesame (Til) Oil</h4>
+          <p>Rich, aromatic and warming — a winter favourite for massage and cooking alike.</p>
+          <div class="product-meta">
+            <span class="product-size">250ml / 500ml</span>
+            <a href="#contact" class="product-link">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="product-card">
+        <div class="product-visual">
+          <svg viewBox="0 0 100 140"><path d="M38 10h24v18l10 14v78a8 8 0 0 1-8 8H36a8 8 0 0 1-8-8V42l10-14z" fill="#FFFBF2" stroke="#C08A17" stroke-width="2.5"/><rect x="36" y="70" width="28" height="50" fill="#E8B94D"/><rect x="34" y="8" width="32" height="8" rx="2" fill="#4A2E1D"/></svg>
+        </div>
+        <div class="product-body">
+          <h4>Cold-Pressed Coconut Oil</h4>
+          <p>Light, fragrant, multi-purpose oil — for cooking, hair, and gentle skin care.</p>
+          <div class="product-meta">
+            <span class="product-size">200ml / 500ml</span>
+            <a href="#contact" class="product-link">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="product-card">
+        <div class="product-visual">
+          <svg viewBox="0 0 100 140"><rect x="24" y="30" width="52" height="88" rx="6" fill="#FFFBF2" stroke="#4A2E1D" stroke-width="2.5"/><rect x="24" y="30" width="52" height="26" fill="#E8B94D"/><path d="M40 30 l10 -18 l10 18" fill="none" stroke="#4A2E1D" stroke-width="3"/></svg>
+        </div>
+        <div class="product-body">
+          <h4>Chakki Fresh Wheat Atta</h4>
+          <p>Stone-ground on a traditional chakki to keep the bran and germ intact — soft, fibre-rich rotis every day.</p>
+          <div class="product-meta">
+            <span class="product-size">5kg / 10kg</span>
+            <a href="#contact" class="product-link">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="product-card">
+        <div class="product-visual">
+          <span class="product-tag">Family Pack</span>
+          <svg viewBox="0 0 100 140"><rect x="24" y="30" width="52" height="88" rx="6" fill="#FFFBF2" stroke="#4A2E1D" stroke-width="2.5"/><rect x="24" y="30" width="52" height="26" fill="#3E6650"/><path d="M40 30 l10 -18 l10 18" fill="none" stroke="#4A2E1D" stroke-width="3"/></svg>
+        </div>
+        <div class="product-body">
+          <h4>5-Grain Multigrain Atta</h4>
+          <p>Wheat, jowar, bajra, chana and oats milled together for a wholesome, high-protein daily meal.</p>
+          <div class="product-meta">
+            <span class="product-size">5kg / 10kg</span>
+            <a href="#contact" class="product-link">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= MOTHER'S CARE / TESTIMONIALS ================= -->
+<section class="care" id="care">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" style="color:#E8B94D;">Mother's Care</span>
+      <h2>Trusted in kitchens where health comes first</h2>
+      <p>Shurbhi is chosen by mothers who read labels twice — for the health of their children, their parents, and everyone in between.</p>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <span class="quote-mark">&ldquo;</span>
+        <p class="body">Since I switched to Shurbhi's mustard oil, our food actually smells the way my grandmother's kitchen used to. My kids notice the difference too.</p>
+        <div class="who">
+          <div class="who-avatar">R</div>
+          <div><div class="who-name">Rekha Sharma</div><div class="who-role">Mother of two, Lucknow</div></div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <span class="quote-mark">&ldquo;</span>
+        <p class="body">My father is diabetic and our doctor recommended cold-pressed oils only. Shurbhi's groundnut oil has become a staple — clean, honest and reliable.</p>
+        <div class="who">
+          <div class="who-avatar">S</div>
+          <div><div class="who-name">Sunita Verma</div><div class="who-role">Homemaker &amp; caregiver</div></div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <span class="quote-mark">&ldquo;</span>
+        <p class="body">The multigrain atta has genuinely changed our breakfast rotis. Soft, filling, and I feel good knowing exactly what's gone into it.</p>
+        <div class="who">
+          <div class="who-avatar">P</div>
+          <div><div class="who-name">Priya Nigam</div><div class="who-role">Working mother of one</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Bring Shurbhi to your kitchen</h2>
+      <p>Have a question about our oils and atta, want to place a bulk order, or become a distributor? We'd love to hear from you.</p>
+
+      <div class="info-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2Z"/></svg>
+        <div><strong>Call Us</strong><span>+91 98765 43210</span></div>
+      </div>
+      <div class="info-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 5 8 7 8-7"/></svg>
+        <div><strong>Email</strong><span>hello@shurbhi.in</span></div>
+      </div>
+      <div class="info-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><strong>Visit Us</strong><span>Shurbhi Oil Mill, Lucknow, Uttar Pradesh</span></div>
+      </div>
+      <div class="info-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <div><strong>Working Hours</strong><span>Mon – Sat, 9:00 AM to 7:00 PM</span></div>
+      </div>
+
+      <div class="social-row">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 9h3V6h-3a4 4 0 0 0-4 4v2H8v3h2v6h3v-6h3l1-3h-4v-2a1 1 0 0 1 1-1z"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 21l1.6-4.8A8.5 8.5 0 1 1 9 19.4z"/></svg></a>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm" method="post">
+         {% csrf_token %}
+      <div class="form-row">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input id="name" type="text" name="name" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="Phone Number">Phone Number</label>
+          <input id="phone" type="tel" name="phone_number" placeholder="+91 00000 00000" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="interested">I'm interested in</label>
+        <select id="interest" name="interest">
+          <option>Mustard Oil</option>
+          <option>Groundnut Oil</option>
+          <option>Sesame Oil</option>
+          <option>Coconut Oil</option>
+          <option>Wheat Atta</option>
+          <option>Multigrain Atta</option>
+          <option>Bulk / Distributor Enquiry</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="Message">Message</label>
+        <textarea id="message" name ="message" placeholder="Tell us what you need..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-solid">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Shurbhi</div>
+        <p class="footer-tag">Kacchi ghani oils and chakki atta, pressed slowly for the health of every family.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <a href="#story">Our Story</a>
+          <a href="#process">Kacchi Ghani</a>
+          <a href="#products">Products</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="#care">Mother's Care</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Become a Distributor</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Shurbhi. All rights reserved.</span>
+      <span>Made with care, for every home.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
