@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!py=i1yqt0c$uuzz4ir*$+cmx!cbv_xco%ku22i*zc#c&*sw+d'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = false
+DEBUG = os.environ.get('DEBUG', ).lower() == 'true'
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
 
 
 # Application definition
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django_mongodb_backend',
-        'HOST': 'mongodb+srv://amangupta945492_db_user:aman%40231211@cluster0.2z5ueca.mongodb.net/?appName=Cluster0',
+        'HOST': os.environ.get('MONGODB_URL'),
         'NAME': 'my_site',
     },
 }
